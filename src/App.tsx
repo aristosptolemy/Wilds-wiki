@@ -6,6 +6,7 @@ import "./css/button.css";
 
 import TopPage from './sub-pages/top-page';
 import NewTitleBuild from './sub-pages/build-page';
+import WikiDetail from './sub-pages/wikipage';
 
 import './App.css'
 
@@ -22,7 +23,7 @@ const App = () => {
             <Routes location={location}>
               <Route path="/" element={<TopPage />} />
               <Route path = "/new-title-build" element={<NewTitleBuild />} />
-
+              <Route path="/gameWiKi/:id" element={<WikiDetail />}/>
             </Routes>
           </div>
         </CSSTransition>

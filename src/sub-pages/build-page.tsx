@@ -41,6 +41,20 @@ const NewTitleBuild = () => {
         </div>
         <div>
           <div>追加されてあるタイトル</div>
+          <table>
+            <thead>
+              <tr>
+                <th>一覧</th>
+              </tr>
+            </thead>
+            <tbody>
+              {TitleDatas.map((row,index) => (
+                <tr key={index}>
+                  <td>{row[1]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </>
