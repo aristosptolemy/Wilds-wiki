@@ -1,0 +1,13 @@
+.abutton {
+  background-color: #2f4f4f;
+  color: #fff;
+  padding: 8px 30px;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 10px;
+}
+.abutton:hover {
+  color: #fff;
+  opacity: 0.8;
+}
