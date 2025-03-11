@@ -1,11 +1,12 @@
 
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { TitlesGet } from '../backend/server-end';
+import { TitlesGet, SpeedTest } from '../backend/server-end';
 
 const TopPage = () => {
 
   const [TitleDatas, setTitleDatas] = useState([]);
+  //const TitleDatas = titlesGet
 
 
   useEffect(() => {
@@ -36,6 +37,7 @@ const TopPage = () => {
             </ul>
           </div>
         </div>
+        <button type="button" onClick={SpeedTest}>テストボタン</button>
       </div>
     </>
   )

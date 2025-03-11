@@ -1,5 +1,5 @@
 const PostURL = "https://script.google.com/macros/s/AKfycby2DvbXQwuwC9Cq-8gUQzxMr0byiDyYvXq_HeZWfPYDXtOZ37CZtwxvCEE6rfS0ie1Q/exec";
-import toast from 'react-hot-toast';
+//import toast from 'react-hot-toast';
 
 
 export const NewTitle = async (titleName: string) => {
@@ -17,6 +17,7 @@ export const NewTitle = async (titleName: string) => {
       }
     )
     const result = await response.json()
+    return result
 
   }catch (e){
     return e;
@@ -36,9 +37,41 @@ export const TitlesGet = async () => {
       }
     )
     const result = await response.json()
+    return result;
+  }catch (e){
+    return e;
+  }
+}
+
+export const SpeedTest = async () => {
+  try {
+    const response = await fetch (
+      PostURL,
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          action: 'test',
+        })
+      }
+    )
+    const result = await response.json()
     console.log(result)
     return result;
   }catch (e){
     return e;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
